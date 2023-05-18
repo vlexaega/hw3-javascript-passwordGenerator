@@ -1,95 +1,75 @@
-// // // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// // // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-}
-
-// // }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// Assignment code here
 
 function generatePassword() {
-    return password
-}
+ // USER PROMPTS FOR INPUT
+    var passwordLength = prompt("Please input a password length (at least 8 characters but no more than 128 characters).");
+    var includeLowercase = confirm("Include lowercase letters?");
+    var includeUppercase = confirm("Include uppercase letters?");
+    var includeNumeric = confirm("Include numbers?");
+    var includeSpecial = confirm("Include special characters?");
+// USER CONFIRMATION IS LENGTH NOT SATISFIED.
+    if (passwordLength < 8 || passwordLength > 128) {
+      passwordLength = prompt("Password length invalid. Please enter number between 8 and 128.");
+    }
+  
+//GENERATE PASSWORD VARS
+    var generatedPass = [];
+    var eligiblevalues = [];
+//CHARACTER STRINGS
+    var specialCharsString = "!@#$%^&*(){}[]=<>/,.";
+    var lowercaseCharsString = "abcdefghijklmnopqrstuvwxyz";
+    var numbersString = "0123456789";
+    var uppercaseCharsString = "ABCDEFGHIJKLMNOPQRSTUV"
+  
+//STRING CONVERSIONS TO ARRAYS
+    var specialCharArray = specialCharsString.split('');
+    var lowercaseArray = lowercaseCharsString.split('');
+    var numbersArray = numbersString.split('');
+    var uppercaseArray = uppercaseCharsString.split('');
+    
+    //lowercase
+    if (includeLowercase)  {
+      eligiblevalues.push(...lowercaseArray);
+    }
+  
+    //uppercase
+    if (includeUppercase) {
+      eligiblevalues.push(...uppercaseArray);
+    }
+  
+    //numbers
+    if (includeNumeric) {
+      eligiblevalues.push(...numbersArray);
+    }
+  
+    //specialchars
+    if (includeSpecial) {
+      eligiblevalues.push(...specialCharArray);
+    }
+  
 
-// // DATA (globalvariables)
-//     // password?
-//     // generate button
-//     // array alphabet 
-//     // use array or string of characters?
-// var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-// var lowerCase = 'abcdefghijklmnopqrstuvwxyz'
-//     // array numbers
-// var numeriC = '0123456789'
-//     // array symbols 
-// var specialCharacters = '!@#$%^&*_-<+>;:'
-// var characterTypes = ("lowercase", "uppercase", "numeric", "specialcharacters")
-// var selectionY = true
-// var selectionN = false
-
-// // idea of use:
-//     // user selects "generate password"
-//     // prompt user for selection of criteria - userPrompt function
-//         // display list with var charactersUser array
-//             // list should display
-//             var 
-//             function specCharacUser () {
-//                 console.log("Please select" + characterTypes)
-//                 return;
-//             }
-//                 // Lowercase // Y or N
-//                 // Uppercase // Y or N
-//                 // Numeric // Y or N
-//                 // Special Characters // Y or N
-//             specCharacUser()
-
-            
-
-//         // if all character types are selected
-//             //then generatePasswordgeneral()function begins
-//             //select from global vars the below:
-//                 // 8 elements from lowerCase array
-//                 // 2 elements from upperCase array
-//                 // 1 element from specialCharacters array
-//                 // 1 element from numeriC array
-//                 // // let password = (mix of global vars)
-//         // if 1 character type is selected
-//             // then prompt user to select at least 2
-//                 // reinitiate userPrompt function
-//         // if 2 character types are selected
-//             // then generatePasswordtwo begins
-//             //select from global vars the below: 
-//                 // 9 elements from uppercase array
-//                 // 1 element from specialCharacters array
-//                 // // let password = (mix of global vars)
-//         // if 3 character types are selected 
-//             // then generatePasswordthree begins
-//             // select from global vars the below:
-//                 // 8 elements from lowerCase array
-//                 // 2 elements from upperCase array
-//                 // 1 element from specialCharacters array
-//                 // let password = (mix of global vars)
-
-                
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  //CREATE PASSWORD
+  
+    for(var i = 0; i < passwordLength; i++) {
+      //use a random number to select from arrays/strings up to the length
+      var generatedPass.push((eligiblevalues[Math.floor(Math.random() * eligiblevalues.length)]));
+    }
+  
+    //return the pretty password
+    return(generatedPass.join(''));
+  }
+  
+  // Get references to the #generate element
+  var generateBtn = document.querySelector("#generate");
+  
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+  
+  }
+  
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
