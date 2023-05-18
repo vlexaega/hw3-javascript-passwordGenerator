@@ -35,7 +35,7 @@ MDN articles:
 
 
 ## Screenshot
-/Users/alexandervega/Homeworks/hw3-javascript-passwordGenerator/images/screenGrab1.jpg
+![screenGrab1](https://github.com/vlexaega/hw3-javascript-passwordGenerator/assets/132007323/f16a1ff8-5202-45a5-b104-f129da626878)
 
 ## License
 N/A
