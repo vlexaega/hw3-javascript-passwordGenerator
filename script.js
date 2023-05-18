@@ -22,17 +22,18 @@ function generatePassword(){
     var numberStringArray = numberString.split('');
     var upperCaseArray = upperCase.split('');
 //PROMPT USER FOR INPUT
-    var passwordLength = prompt("How long would you like your password? Note: Must be at least 8 characters but no more than 128 characters.")
+    var passwordLength = prompt("I see you need a password.  How long would you like it to be? NOTE: Needs to be at least 8 characters but no more than 128 characters.")
 //STOP USER IF LENGTH INVALID
     if (passwordLength < 8 || passwordLength >128){
         passwordLength = alert("Password must be at least 8 characters and no more than 128 characters.")
         return generatePassword();
     }
 //RECORD VARIABLES IN THE CODE
-    var includeLowercase = confirm("Include lowercase letters?");
-    var includeUppercase = confirm("Include uppercase letters?");
-    var includeNumeric = confirm("Include numbers?");
-    var includeSpecial = confirm("Include special characters?");
+    var includeLowercase = confirm("Do you want lowercase letters? OK = yes (btw)");
+    var includeUppercase = confirm("How about uppercase letters?  OK = yes (btw)");
+    var includeNumeric = confirm("Any numbers? OK = yes (btw)");
+    var includeSpecial = confirm("Wanna make it special with special characters? OK = yes (btw)");
+    console.log(includeSpecial)
 //CREATE ARRAYS FOR USERSELECTION AND GENERATEDPASSWORD
     var userSelection = [];
     var generatedPassword = []; 
