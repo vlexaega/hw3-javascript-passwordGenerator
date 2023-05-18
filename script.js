@@ -5,23 +5,20 @@
     // generate button
     // array alphabet 
     // use array or string of characters?
-var upperCase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
-var lowerCase = ['abcdefghijklmnopqrstuvwxyz']
+var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+var lowerCase = 'abcdefghijklmnopqrstuvwxyz'
     // array numbers
-var numeriC = ['0123456789']
+var numeriC = '0123456789'
     // array symbols 
-var specialCharacters = ['!@#$%^&*_-<+>;:']
+var specialCharacters = '!@#$%^&*_-<+>;:'
 var characterTypes = ["lowercase", "uppercase", "numeric", "specialcharacters"]
 var selectionY = true
 var selectionN = false
 
-var HelloAgain
-function declareHelloAgain (upperCase, lowerCase, numeriC, characterTypes){
-    console.log("Hello, my parameters are "+ upperCase + lowerCase + numeriC + ", and " +characterTypes);
-    console.log("--------");
-    return;
-}
-declareHelloAgain()
+
+// USER INTERACTIONS
+    // user clicks generate password 
+
 // FUNCTIONS
 // 1) generateBtn.addEventListener("click", generatePassword);
 
@@ -32,8 +29,7 @@ declareHelloAgain()
 
 // 3) generatePassword()
 
-// USER INTERACTIONS
-    // user clicks generate password 
+
 
 // INITIALIZATION
     // function to generatePassword
