@@ -1,17 +1,32 @@
 // Assignment code here
 
-function generatePassword() {
+function generatePassword() 
  // USER PROMPTS FOR INPUT
-    var passwordLength = prompt("Please input a password length (at least 8 characters but no more than 128 characters).");
+
+// ASK USER FOR PASSWORD LENGTH, MUST BE 8 CHARACTERS, NO MORE THAN 128 
+prompt("password long 8-128")
+// USER PUTS IN LESS THAN 8 CHARACTERS OR MORE THAN 128
+var userChoice = prompt("Please ensure 8-128 characters");
+if (!characterSelector.includes(password))
+// RETURN TO INITIAL SCREEN
+
+function getUserChoice(){
+    var passwordLength = prompt("How long would you like your password? Note: Must be at least 8 characters but no more than 128 characters.");
+    var passwordShort = prompt("Your password must include at least 8 characters but no more than 128 characters.");
+    if (!passwordLength < 8 || passwordLength > 128);
+    return passwordShort;
+    }
+function getUserChoice()
+    
     var includeLowercase = confirm("Include lowercase letters?");
     var includeUppercase = confirm("Include uppercase letters?");
     var includeNumeric = confirm("Include numbers?");
     var includeSpecial = confirm("Include special characters?");
 // USER CONFIRMATION IS LENGTH NOT SATISFIED.
-    if (passwordLength < 8 || passwordLength > 128) {
-      passwordLength = prompt("Password length invalid. Please enter number between 8 and 128.");
-    }
-  
+    // if (passwordLength < 8 || passwordLength > 128) {
+    //   passwordLength = prompt("Password length invalid. Please enter number between 8 and 128.");
+    // }
+ 
 //GENERATE PASSWORD VARS
     var generatedPass = [];
     var eligiblevalues = [];
@@ -52,12 +67,12 @@ function generatePassword() {
   
     for(var i = 0; i < passwordLength; i++) {
       //use a random number to select from arrays/strings up to the length
-      var generatedPass.push((eligiblevalues[Math.floor(Math.random() * eligiblevalues.length)]));
+      generatedPass.push((eligiblevalues[Math.floor(Math.random() * eligiblevalues.length)]));
     }
   
-    //return the pretty password
+    //RETURN THE PASSWORD
     return(generatedPass.join(''));
-  }
+  
   
   // Get references to the #generate element
   var generateBtn = document.querySelector("#generate");
