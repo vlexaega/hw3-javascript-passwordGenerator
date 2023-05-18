@@ -12,15 +12,15 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword(){
 //CHARACTER STRINGS
-    var specialCharsString = "!@#$%^&*(){}[]=<>/,.";
-    var lowercaseCharsString = "abcdefghijklmnopqrstuvwxyz";
-    var numbersString = "0123456789";
-    var uppercaseCharsString = "ABCDEFGHIJKLMNOPQRSTUV"
+    var specialCharacters= "!@#$%^&*(){}[]=<>/,.";
+    var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    var numberString = "0123456789";
+    var upperCase = "ABCDEFGHIJKLMNOPQRSTUV"
 //STRING CONVERSIONS TO ARRAYS
-    var specialCharArray = specialCharsString.split('');
-    var lowercaseArray = lowercaseCharsString.split('');
-    var numbersArray = numbersString.split('');
-    var uppercaseArray = uppercaseCharsString.split('');
+    var specialCharactersArray = specialCharacters.split('');
+    var lowerCaseArray = lowerCase.split('');
+    var numberStringArray = numberString.split('');
+    var upperCaseArray = upperCase.split('');
 //PROMPT USER FOR INPUT
     var passwordLength = prompt("How long would you like your password? Note: Must be at least 8 characters but no more than 128 characters.")
 //STOP USER IF LENGTH INVALID
@@ -33,25 +33,27 @@ function generatePassword(){
     var includeUppercase = confirm("Include uppercase letters?");
     var includeNumeric = confirm("Include numbers?");
     var includeSpecial = confirm("Include special characters?");
-    var eligiblevalues = [];
-    var generatedPass = []; 
+//CREATE ARRAYS FOR USERSELECTION AND GENERATEDPASSWORD
+    var userSelection = [];
+    var generatedPassword = []; 
+//PUSHES USER SELECTIONS INTO ARRAYS
     if (includeLowercase)  {
-        eligiblevalues.push(...lowercaseArray);
+        userSelection.push(...lowerCaseArray);
     }
     //uppercase
     if (includeUppercase) {
-        eligiblevalues.push(...uppercaseArray);
+        userSelection.push(...upperCaseArray);
     }
     //numbers
     if (includeNumeric) {
-        eligiblevalues.push(...numbersArray);
+        userSelection.push(...numberStringArray);
     }
     //specialchars
     if (includeSpecial) {
-        eligiblevalues.push(...specialCharArray);
+        userSelection.push(...specialCharactersArray);
     }
     for (var i = 0; i < passwordLength; i++) {
-        generatedPass.push(eligiblevalues[Math.floor(Math.random() * eligiblevalues.length)])
+        generatedPassword.push(userSelection[Math.floor(Math.random() * userSelection.length)])
     }
-    return(generatedPass.join(''));
+    return(generatedPassword.join(''));
 }
