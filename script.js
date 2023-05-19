@@ -26,7 +26,7 @@ function generatePassword(){
 //STOP USER IF LENGTH INVALID
     if (passwordLength < 8 || passwordLength >128){
         passwordLength = alert("Password must be at least 8 characters and no more than 128 characters.")
-        return generatePassword();
+        return ("Try Again");
     }
 //RECORD VARIABLES IN THE CODE
     var includeLowercase = confirm("Do you want lowercase letters? OK = yes (btw)");
