@@ -10,13 +10,13 @@ The purpose of this repo is to create an application that an employee can use to
 This repo is publicly accessible.  Installation can be achieved by the following processes:
 
 * The repo can be cloned via the following git link:
-https://github.com/vlexaega/hw3-javascript-passwordGenerator
+* https://github.com/vlexaega/hw3-javascript-passwordGenerator
 
 * The repo can be cloned via the following git command:
-git@github.com:vlexaega/hw3-javascript-passwordGenerator.git
+* git@github.com:vlexaega/hw3-javascript-passwordGenerator.git
 
 * It can also be accessed via the below hyperlink:
-
+* https://vlexaega.github.io/hw3-javascript-passwordGenerator/
 
 ## Usage
 The webpage will be used to generate a secure password. The user will be prompted for a length followed by selection of character types. Once complete, the user will then receive their secure password for use. 
