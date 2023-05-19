@@ -13,7 +13,7 @@ This repo is publicly accessible.  Installation can be achieved by the following
 https://github.com/vlexaega/hw3-javascript-passwordGenerator
 
 * The repo can be cloned via the following git command:
-https://github.com/vlexaega/hw3-javascript-passwordGenerator.git
+git@github.com:vlexaega/hw3-javascript-passwordGenerator.git
 
 * It can also be accessed via the below hyperlink:
 
