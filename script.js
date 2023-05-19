@@ -30,9 +30,9 @@ function generatePassword(){
     }
 //RECORD VARIABLES IN THE CODE
     var includeLowercase = confirm("Do you want lowercase letters? OK = yes (btw)");
-    var includeUppercase = confirm("How about uppercase letters?  OK = yes (btw)");
-    var includeNumeric = confirm("Any numbers? OK = yes (btw)");
-    var includeSpecial = confirm("Wanna make it special with special characters? OK = yes (btw)");
+    var includeUppercase = confirm("How about uppercase letters?");
+    var includeNumeric = confirm("Any numbers?");
+    var includeSpecial = confirm("Wanna make it special with special characters?");
     console.log(includeSpecial)
 //CREATE ARRAYS FOR USERSELECTION AND GENERATEDPASSWORD
     var userSelection = [];
